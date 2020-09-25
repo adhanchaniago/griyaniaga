@@ -1,17 +1,35 @@
-<!--  Breadcrumbs Section -->
-<section class="breadcrumbs">
-    <div class="container">
+<section class="boot-elemant-bg py-md-5 py-4" style="height: 500px; background-image: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,.5)), url('assets/img/galery/bg.jpg');">
+    <div class="container position-relative py-md-5 py-0">
+        <div class="row">
+            <div class="container" style="position: absolute;">
+                <div class="row">
+                    <div class="col-md-6">
+                    <img class="img-fluid" src="<?php echo base_url('assets/img/galery/home.png');?>">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center text-white my-auto">
+                          <div class="col-sm-12">
+                  <form action="" method="get">
+                    <div class="row">
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control input-search form-control-lg" placeholder="Cari Properti.." name="result">
+                    </div>
+                        <div class="col-sm-3">
+                        <input type="submit" name="submit" class="btn btn-outline-success" value="Cari Properti" >
+                      </div>
+                    </div>
 
-      <div class="d-flex justify-content-between align-items-center">
-        <h2><?php echo $title ?></h2>
-        <ol>
-          <li><a href="<?php echo base_url('') ?>"><i class="ti ti-home"></i> Home</a></li>
-          <li><?php echo $title ?></li>
-        </ol>
-      </div>
+                  </form>
+              </div>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section><!-- End Breadcrumbs Section -->
+    <div class="elemant-bg-overlay black"></div>
+</section>
 
 <div class="container">
 <div class="row">
