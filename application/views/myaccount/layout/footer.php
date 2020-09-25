@@ -67,42 +67,13 @@
 
 
 
-
-
-
-<!-- <script type="text/javascript">
-  $(document).ready(function(){
-    $('#province').change(function(){
-              var id=$(this).val();
-
-              var csrfName = '<?php echo $this->security->get_csrf_token_name(); ?>',
-            csrfHash = '<?php echo $this->security->get_csrf_hash(); ?>';
-
-              $.ajax({
-                  url : "<?php echo site_url('myaccount/property/city');?>",
-                  method : "POST",
-                  data : {[csrfName]: csrfHash,id: id},
-                  async : true,
-                  dataType : 'json',
-                  success: function(data){
-
-                    csrfName = data.csrfName;
-                    csrfHash = data.csrfHash;
-
-                      var html = '';
-                      var i;
-                      for(i=0; i<data.length; i++){
-                          html += '<option value='+data[i].id+'>'+data[i].city_name+'</option>';
-                      }
-                      $('#city').html(html);
-
-                  }
-              });
-              return false;
-          });
-
-  });
-</script> -->
+<script>
+// var fnf = document.getElementById("formattedNumberField");
+// fnf.addEventListener('keyup', function(evt){
+//     var n = parseInt(this.value.replace(/\D/g,''),10);
+//     fnf.value = n.toLocaleString();
+// }, false);
+</script>
 
 
 

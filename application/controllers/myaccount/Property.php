@@ -152,6 +152,7 @@ class Property extends CI_Controller {
 				$config['max_size']             = 5000000; //Dalam Kilobyte
 				$config['max_width']            = 5000000; //Lebar (pixel)
 				$config['max_height']           = 5000000; //tinggi (pixel)
+				$config['encrypt_name'] 				= TRUE;
 				$this->load->library('upload', $config);
 				if (!$this->upload->do_upload('property_image')) {
 
@@ -184,7 +185,7 @@ class Property extends CI_Controller {
                 $config['height'] = 600;
             }
             $config['master_dim'] = 'auto';
-						$config['encrypt_name'] = TRUE;
+
 
 
             $this->load->library('image_lib',$config);
@@ -228,6 +229,9 @@ class Property extends CI_Controller {
         $this->image_lib->initialize($config);
         $this->image_lib->watermark();
 
+				$price 				= $this->input->post('property_price');
+				$price_final 	= preg_replace('/\D/','',$price);
+
 				$slugcode       = random_string('numeric', 5);
 				$property_slug  = url_title($this->input->post('property_title'), 'dash', TRUE);
 				$id_iklan =  random_string('numeric', 7);
@@ -251,7 +255,7 @@ class Property extends CI_Controller {
 					'property_electrical'       => $this->input->post('property_electrical'),
 					'property_garage'           => $this->input->post('property_garage'),
 					'property_certificate'      => $this->input->post('property_certificate'),
-					'property_price'            => $this->input->post('property_price'),
+					'property_price'            => $price_final,
 					'property_negotiable'       => $this->input->post('property_negotiable'),
 					'property_desc'             => $this->input->post('property_desc'),
 					'property_image'            => $upload_data['uploads']['file_name'],
@@ -265,7 +269,7 @@ class Property extends CI_Controller {
 				$this->upload_images($insert_id);
 				$this->user_model->update_post_count($id);
 				$this->session->set_flashdata('message', 'Data Iklan telah ditambahkan');
-				// redirect(base_url('myaccount/property'), 'refresh');
+				redirect(base_url('myaccount/property'), 'refresh');
 
 			}
 		}
@@ -316,6 +320,7 @@ public function update($id)
 						$config['max_size']             = 500000; //Dalam Kilobyte
 						$config['max_width']            = 500000; //Lebar (pixel)
 						$config['max_height']           = 500000; //tinggi (pixel)
+						$config['encrypt_name'] 				= TRUE;
 						$this->load->library('upload', $config);
 						if (!$this->upload->do_upload('property_image')) {
 

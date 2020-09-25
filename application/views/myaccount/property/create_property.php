@@ -162,7 +162,7 @@
 										<div class="form-group">
 											<label>Harga Property<span class="text-danger">*</span>
 											</label>
-											<input type="text" class="form-control" name="property_price" placeholder="Harga Property" value="<?php echo set_value('property_price'); ?>">
+											<input type="text" class="form-control" id="formattedNumberField" name="property_price" placeholder="Harga Property" value="<?php echo set_value('property_price'); ?>">
 											<?php echo form_error('property_price', '<small class="text-danger">', '</small>'); ?>
 										</div>
 									</div>
