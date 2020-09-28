@@ -1,6 +1,16 @@
 
+<div class="text-center">
+		<?php
+		echo $this->session->flashdata('message');
+		if (isset($error_upload)) {
+				echo '<div class="alert alert-warning">' . $error_upload . '</div>';
+		}
+		?>
+</div>
 
 	  <div class="row justify-content-md-center">
+
+
 
 				<?php
 				echo form_open_multipart('myaccount/property/create');

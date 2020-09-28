@@ -158,7 +158,7 @@ class Property extends CI_Controller {
 
 				$data = [
 						'title'        => 'Buat Iklan',
-
+						'error_upload' => $this->upload->display_errors(),
 						'type'          => $type,
 						'province'      => $province,
 						'content'       => 'myaccount/property/create_property'
