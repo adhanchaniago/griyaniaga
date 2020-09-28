@@ -131,7 +131,7 @@ class Property_model extends CI_Model{
 
 	// FRONT VIEW
 
-	//Read Berita
+	//Read Properti
 	public function read($property_slug)
 	{
 			$this->db->select('property.*,user.user_name, user.user_image, user.user_bio, user.date_register, user.user_phone, user.user_whatsapp, user.email, company.company_name, company.company_logo');
@@ -145,7 +145,7 @@ class Property_model extends CI_Model{
 			return $query->row();
 	}
 	// Update Counter Property
-	function update_counter($property_slug)
+	public function update_counter($property_slug)
 	{
 			// return current article views
 			$this->db->where('property_slug', urldecode($property_slug));
@@ -155,6 +155,21 @@ class Property_model extends CI_Model{
 			$this->db->where('property_slug', urldecode($property_slug));
 			$this->db->set('property_views', ($count->property_views + 1));
 			$this->db->update('property');
+	}
+	public function get_property_popular()
+	{
+		$this->db->select('property.*, user.user_image');
+		$this->db->from('property');
+		$this->db->where('start_date <= ' , date('Y-m-d'));
+		$this->db->where('expired_date >= ' , date('Y-m-d'));
+
+		// join
+		$this->db->join('user', 'user.id = property.user_id', 'LEFT');
+		// End Join
+		$this->db->order_by('property_views', 'DESC');
+		$this->db->limit(3);
+		$query = $this->db->get();
+		return $query->result();
 	}
 
 
