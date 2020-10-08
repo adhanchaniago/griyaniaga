@@ -8,7 +8,7 @@
         <div class="text-center">
             <?php
             echo $this->session->flashdata('message');
-            if (isset($errors_upload)) {
+            if (isset($error_upload)) {
                 echo '<div class="alert alert-warning">' . $error_upload . '</div>';
             }
             ?>

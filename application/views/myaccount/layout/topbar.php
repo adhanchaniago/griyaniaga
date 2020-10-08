@@ -6,137 +6,141 @@ $meta = $this->meta_model->get_meta();
 
 
 
-<!--
-			Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
-		-->
-		<div class="main-header" data-background-color="blue">
-			<!-- Logo Header -->
-			<div class="logo-header">
+<!-- TopBar -->
 
-				<a href="index.html" class="logo text-white">
-					Account
-				</a>
-				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon">
-						<i class="fa fa-bars"></i>
-					</span>
-				</button>
-				<button class="topbar-toggler more"><i class="fa fa-ellipsis-v"></i></button>
-				<div class="navbar-minimize">
-					<button class="btn btn-minimize btn-rounded">
-						<i class="fa fa-bars"></i>
-					</button>
-				</div>
-			</div>
-			<!-- End Logo Header -->
+<nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top" style="border-left:1px solid #ee5343;border-right:1px solid #ee5343;">
 
-			<!-- Navbar Header -->
-			<nav class="navbar navbar-header navbar-expand-lg">
+    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+    <ul class="navbar-nav ml-auto">
 
-				<div class="container-fluid">
+        <!-- <li class="nav-item dropdown no-arrow mx-1">
+            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <span class="badge badge-danger badge-counter">3+</span>
+            </a>
+            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                    Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                        <div class="icon-circle bg-primary">
+                            <i class="fas fa-file-alt text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="small text-gray-500">December 12, 2019</div>
+                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                    </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                        <div class="icon-circle bg-success">
+                            <i class="fas fa-donate text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="small text-gray-500">December 7, 2019</div>
+                        $290.29 has been deposited into your account!
+                    </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                        <div class="icon-circle bg-warning">
+                            <i class="fas fa-exclamation-triangle text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="small text-gray-500">December 2, 2019</div>
+                        Spending Alert: We've noticed unusually high spending for your account.
+                    </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown no-arrow mx-1">
+            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <span class="badge badge-warning badge-counter">2</span>
+            </a>
+            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                    Message Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                        <img class="rounded-circle" src="img/man.png" style="max-width: 60px" alt="">
+                        <div class="status-indicator bg-success"></div>
+                    </div>
+                    <div class="font-weight-bold">
+                        <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been
+                            having.</div>
+                        <div class="small text-gray-500">Udin Cilok · 58m</div>
+                    </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                        <img class="rounded-circle" src="img/girl.png" style="max-width: 60px" alt="">
+                        <div class="status-indicator bg-default"></div>
+                    </div>
+                    <div>
+                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people
+                            say this to all dogs, even if they aren't good...</div>
+                        <div class="small text-gray-500">Jaenab · 2w</div>
+                    </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+            </div>
+        </li> -->
 
-					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-						<li class="nav-item toggle-nav-search hidden-caret">
-							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
-								<i class="fa fa-search"></i>
-							</a>
-						</li>
-						<li class="nav-item dropdown hidden-caret">
-							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-envelope"></i>
-							</a>
-							<ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
-								<li>
-									<div class="dropdown-title d-flex justify-content-between align-items-center">
-										Messages
-										<a href="#" class="small">Mark all as read</a>
-									</div>
-								</li>
-								<li>
-									<div class="message-notif-scroll scrollbar-outer">
-										<div class="notif-center">
-											<a href="#">
-												<div class="notif-img">
-													<img src="assets/img/jm_denis.jpg" alt="Img Profile">
-												</div>
-												<div class="notif-content">
-													<span class="subject">Jimmy Denis</span>
-													<span class="block">
-														How are you ?
-													</span>
-													<span class="time">5 minutes ago</span>
-												</div>
-											</a>
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="<?php echo base_url(); ?>" target="blank" id="userDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="ti-link"></i>
+                <span class="ml-2 d-none d-lg-inline text-white small">Lihat Website</span>
+            </a>
+        </li>
 
-										</div>
-									</div>
-								</li>
-								<li>
-									<a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown hidden-caret">
-							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-bell"></i>
-								<span class="notification">4</span>
-							</a>
-							<ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
-								<li>
-									<div class="dropdown-title">You have 4 new notification</div>
-								</li>
-								<li>
-									<div class="notif-scroll scrollbar-outer">
-										<div class="notif-center">
-											<a href="#">
-												<div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
-												<div class="notif-content">
-													<span class="block">
-														New user registered
-													</span>
-													<span class="time">5 minutes ago</span>
-												</div>
-											</a>
 
-										</div>
-									</div>
-								</li>
-								<li>
-									<a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown hidden-caret">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-								<div class="avatar-sm">
-									<img src="<?php echo base_url('assets/img/avatars/'.$user->user_image);?>" alt="..." class="avatar-img rounded-circle">
-								</div>
-							</a>
-							<ul class="dropdown-menu dropdown-user animated fadeIn">
-								<li>
-									<div class="user-box">
-										<div class="avatar-lg"><img src="<?php echo base_url('assets/img/avatars/'.$user->user_image);?>" alt="image profile" class="avatar-img rounded"></div>
-										<div class="u-text">
-											<h4><?php echo $user->user_name;?></h4>
-											<p class="text-muted"><?php echo $user->email;?></p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">My Profile</a>
-									<a class="dropdown-item" href="#">My Balance</a>
-									<a class="dropdown-item" href="#">Inbox</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Account Setting</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="<?php echo base_url('auth/logout');?>">Logout</a>
-								</li>
-							</ul>
-						</li>
+        <div class="topbar-divider d-none d-sm-block"></div>
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="<?php echo base_url('assets/img/avatars/' . $user->user_image); ?>" style="max-width: 60px">
+                <span class="ml-2 d-none d-lg-inline text-white small"><?php echo $user->user_name; ?></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="<?php echo base_url('admin/myaccount/update'); ?>">
+                    <i class="ti-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Ubah Profile
+                </a>
+                <a class="dropdown-item" href="<?php echo base_url('admin/myaccount/ubah_password'); ?>">
+                    <i class="ti-lock fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Ganti Password
+                </a>
 
-					</ul>
-				</div>
-			</nav>
-			<!-- End Navbar -->
-		</div>
+
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="<?php echo base_url('auth/logout'); ?>">
+                    <i class="ti-plug fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                </a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<!-- Topbar -->
+
+
+<!-- Container Fluid-->
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800"><?php echo $title; ?></h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo base_url('admin/dashboard') ?>"> Dashboard</a></li>
+            <li class="breadcrumb-item active"><a href="<?php echo base_url('myaccount/' . $this->uri->segment(2)) ?>">
+                    <?php echo ucfirst(str_replace('_', ' ', $this->uri->segment(2))) ?>
+                </a></li>
+            <li class="breadcrumb-item active"><?php echo $title ?></li>
+        </ol>
+    </div>

@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Nunito';
-  src: url('../font/Nunito-Regular.ttf');
-  src: url('../font/Nunito-Regular.ttf') format('ttf'),
-    url('../font/Nunito-Regular.ttf') format('truetype');
+  font-family: "Nunito";
+  src: url("../font/Nunito-Regular.ttf");
+  src: url("../font/Nunito-Regular.ttf") format("ttf"),
+    url("../font/Nunito-Regular.ttf") format("truetype");
 }
 
 html {
   position: relative;
   min-height: 100%;
-  font-family: 'Nunito';
+  font-family: "Nunito";
 }
 
 body {
@@ -38,7 +38,6 @@ a:focus {
   background-color: rgb(255, 255, 255);
 }
 
-
 .container,
 .container-fluid,
 .container-login {
@@ -46,15 +45,12 @@ a:focus {
   padding-right: 1.5rem;
 }
 
-
-
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .container-login {
     margin-left: 25rem;
     margin-right: 25rem;
   }
 }
-
 
 .scroll-to-top {
   position: fixed;
@@ -122,8 +118,10 @@ a:focus {
   animation-name: growIn;
   -webkit-animation-duration: 200ms;
   animation-duration: 200ms;
-  -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
-  animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
+  -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1),
+    opacity cubic-bezier(0, 1, 0.4, 1);
+  animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1),
+    opacity cubic-bezier(0, 1, 0.4, 1);
 }
 
 @-webkit-keyframes fadeIn {
@@ -155,59 +153,106 @@ a:focus {
   animation-timing-function: opacity cubic-bezier(0, 1, 0.4, 1);
 }
 
-
 .bg-gradient-primary {
-  background-color: #6777EF;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #6777EF), to(#303f9f));
-  background-image: linear-gradient(180deg, #6777EF 10%, #303f9f 100%);
+  background-color: #6777ef;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #6777ef),
+    to(#303f9f)
+  );
+  background-image: linear-gradient(180deg, #6777ef 10%, #303f9f 100%);
   background-size: cover;
 }
 
 .bg-gradient-secondary {
   background-color: #757575;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #757575), to(#60616f));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #757575),
+    to(#60616f)
+  );
   background-image: linear-gradient(180deg, #757575 10%, #60616f 100%);
   background-size: cover;
 }
 
 .bg-gradient-success {
   background-color: #66bb6a;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #66bb6a), to(#13855c));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #66bb6a),
+    to(#13855c)
+  );
   background-image: linear-gradient(180deg, #66bb6a 10%, #13855c 100%);
   background-size: cover;
 }
 
 .bg-gradient-info {
   background-color: #3abaf4;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #3abaf4), to(#258391));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #3abaf4),
+    to(#258391)
+  );
   background-image: linear-gradient(180deg, #3abaf4 10%, #258391 100%);
   background-size: cover;
 }
 
 .bg-gradient-warning {
   background-color: #ffa426;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ffa426), to(#dda20a));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #ffa426),
+    to(#dda20a)
+  );
   background-image: linear-gradient(180deg, #f6c23e 10%, #ffa426 100%);
   background-size: cover;
 }
 
 .bg-gradient-danger {
   background-color: #fc544b;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #fc544b), to(#be2617));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #fc544b),
+    to(#be2617)
+  );
   background-image: linear-gradient(180deg, #fc544b 10%, #be2617 100%);
   background-size: cover;
 }
 
 .bg-gradient-light {
   background-color: #f8f8f8;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #c7c7c7), to(#f8f8f8));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #c7c7c7),
+    to(#f8f8f8)
+  );
   background-image: linear-gradient(180deg, #c7c7c7 10%, #f8f8f8 100%);
   background-size: cover;
 }
 
 .bg-gradient-dark {
   background-color: #212121;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #212121), to(#373840));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #212121),
+    to(#373840)
+  );
   background-image: linear-gradient(180deg, #212121 10%, #373840 100%);
   background-size: cover;
 }
@@ -262,7 +307,7 @@ a:focus {
 }
 
 .text-xs {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .text-lg {
@@ -304,8 +349,6 @@ a:focus {
 .text-gray-900 {
   color: #3a3b45 !important;
 }
-
-
 
 .icon-circle {
   height: 2.5rem;
@@ -387,7 +430,7 @@ a:focus {
 }
 
 .progress-sm {
-  height: .5rem;
+  height: 0.5rem;
 }
 
 .rotate-15 {
@@ -424,13 +467,13 @@ a:focus {
   vertical-align: 0;
   border: 0;
   font-weight: 900;
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
 }
 
 .sidebar .nav-item.dropdown.show .dropdown-toggle::after,
 .topbar .nav-item.dropdown.show .dropdown-toggle::after {
-  content: '\f107';
+  content: "\f107";
 }
 
 .sidebar .nav-item .nav-link,
@@ -445,8 +488,8 @@ a:focus {
   transform: scale(0.7);
   -webkit-transform-origin: top right;
   transform-origin: top right;
-  right: .25rem;
-  margin-top: -.25rem;
+  right: 0.25rem;
+  margin-top: -0.25rem;
 }
 
 .sidebar .nav-item .nav-link .img-profile,
@@ -593,7 +636,6 @@ a:focus {
   .topbar .dropdown-list .dropdown-item .text-truncate {
     max-width: 13.375rem;
   }
-
 }
 
 .topbar.navbar-light .navbar-nav .nav-item .nav-link {
@@ -628,6 +670,8 @@ a:focus {
 .sidebar .nav-item {
   position: relative;
   margin-bottom: 0px;
+  padding: 15px 0 10px 0;
+  border-bottom: 1px dashed #ddd;
 }
 
 .sidebar .nav-item:last-child {
@@ -663,12 +707,12 @@ a:focus {
   vertical-align: 0;
   border: 0;
   font-weight: 900;
-  content: '\f107';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
 }
 
 .sidebar .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
-  content: '\f105';
+  content: "\f105";
 }
 
 .sidebar .nav-item .collapse {
@@ -678,7 +722,6 @@ a:focus {
   top: 0;
   -webkit-animation: none;
   animation: none;
-
 }
 
 .sidebar .nav-item .collapse .collapse-inner {
@@ -693,7 +736,6 @@ a:focus {
   display: block;
   -webkit-transition: height 0.3s ease;
   transition: height 0.3s ease;
-
 }
 
 .sidebar .nav-item .collapse,
@@ -703,7 +745,7 @@ a:focus {
 
 .sidebar .nav-item .collapse .collapse-inner,
 .sidebar .nav-item .collapsing .collapse-inner {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   min-width: 10rem;
   font-size: 0.85rem;
   margin: 0 0 1rem 0;
@@ -713,7 +755,7 @@ a:focus {
 .sidebar .nav-item .collapsing .collapse-inner .collapse-header {
   margin: 0;
   white-space: nowrap;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 0.65rem;
@@ -759,8 +801,8 @@ a:focus {
 
 .sidebar #sidebarToggle::after {
   font-weight: 900;
-  content: '\f104';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f104";
+  font-family: "Font Awesome 5 Free";
   margin-right: 0.1rem;
 }
 
@@ -806,9 +848,8 @@ a:focus {
   font-size: 0.6rem;
   padding: 0 1rem;
   color: #b7b9cc;
-  letter-spacing: 0.030rem;
+  letter-spacing: 0.03rem;
 }
-
 
 .sidebar .sidebar-brand .sidebar-brand-text {
   display: inline;
@@ -826,14 +867,13 @@ a:focus {
   margin-bottom: 0px;
 }
 
-
 .sidebar.toggled hr.sidebar-divider {
   margin: 0 0 1rem 0;
 }
 
 .sidebar.toggled #sidebarToggle::after {
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
   margin-left: 0.25rem;
 }
 
@@ -845,8 +885,10 @@ a:focus {
   animation-name: growIn;
   -webkit-animation-duration: 200ms;
   animation-duration: 200ms;
-  -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
-  animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
+  -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1),
+    opacity cubic-bezier(0, 1, 0.4, 1);
+  animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1),
+    opacity cubic-bezier(0, 1, 0.4, 1);
 }
 
 .sidebar.toggled .nav-item .collapse,
@@ -906,21 +948,19 @@ a:focus {
   vertical-align: 0;
   border: 0;
   font-weight: 900;
-  content: '\f107';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
 }
 
 .sidebar.toggled .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
-  content: '\f105';
+  content: "\f105";
 }
-
 
 .login-form {
   padding: 3rem !important;
 }
 
 @media (max-width: 768px) {
-
   #container-wrapper {
     min-width: 100vw;
   }
@@ -967,12 +1007,14 @@ a:focus {
     vertical-align: 0;
     border: 0;
     font-weight: 900;
-    content: '\f107';
-    font-family: 'Font Awesome 5 Free';
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
   }
 
-  .sidebar.toggled .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
-    content: '\f105';
+  .sidebar.toggled
+    .nav-item
+    .nav-link[data-toggle="collapse"].collapsed::after {
+    content: "\f105";
   }
 
   .sidebar.toggled .nav-item .collapse {
@@ -998,7 +1040,7 @@ a:focus {
 
   .sidebar.toggled .nav-item .collapse .collapse-inner,
   .sidebar.toggled .nav-item .collapsing .collapse-inner {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     min-width: 10rem;
     font-size: 0.85rem;
     margin: 0 0 1rem 0;
@@ -1008,7 +1050,7 @@ a:focus {
   .sidebar.toggled .nav-item .collapsing .collapse-inner .collapse-header {
     margin: 0;
     white-space: nowrap;
-    padding: .5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 0.65rem;
@@ -1066,10 +1108,16 @@ a:focus {
     font-weight: 800;
     font-size: 0.65rem;
     letter-spacing: 0.13rem;
-    background-color: #6777EF;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #6777EF), to(#303f9f));
-  background-image: linear-gradient(180deg, #6777EF 10%, #303f9f 100%);
-  color: #fff;
+    background-color: #6777ef;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(10%, #6777ef),
+      to(#303f9f)
+    );
+    background-image: linear-gradient(180deg, #6777ef 10%, #303f9f 100%);
+    color: #fff;
   }
 
   .sidebar.toggled .sidebar-brand .sidebar-brand-text {
@@ -1110,9 +1158,7 @@ a:focus {
   .login-form {
     padding: 3rem 2rem !important;
   }
-
 }
-
 
 .breadcrumb {
   background-color: transparent;
@@ -1266,22 +1312,22 @@ a:focus {
 }
 
 .btn-icon-split.btn-sm .icon,
-.btn-group-sm>.btn-icon-split.btn .icon {
+.btn-group-sm > .btn-icon-split.btn .icon {
   padding: 0.25rem 0.5rem;
 }
 
 .btn-icon-split.btn-sm .text,
-.btn-group-sm>.btn-icon-split.btn .text {
+.btn-group-sm > .btn-icon-split.btn .text {
   padding: 0.25rem 0.5rem;
 }
 
 .btn-icon-split.btn-lg .icon,
-.btn-group-lg>.btn-icon-split.btn .icon {
+.btn-group-lg > .btn-icon-split.btn .icon {
   padding: 0.5rem 1rem;
 }
 
 .btn-icon-split.btn-lg .text,
-.btn-group-lg>.btn-icon-split.btn .text {
+.btn-group-lg > .btn-icon-split.btn .text {
   padding: 0.5rem 1rem;
 }
 
@@ -1291,14 +1337,12 @@ a:focus {
 
 .card .card-header .dropdown .dropdown-menu {
   line-height: 1.5;
-
 }
 
 .card .card-header[data-toggle="collapse"] {
   text-decoration: none;
   position: relative;
   padding: 0.75rem 3.25rem 0.75rem 1.25rem;
-
 }
 
 .card .card-header[data-toggle="collapse"]::after {
@@ -1308,8 +1352,8 @@ a:focus {
   padding-right: 1.725rem;
   line-height: 51px;
   font-weight: 900;
-  content: '\f107';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
 }
 
 .card .card-header[data-toggle="collapse"].collapsed {
@@ -1317,7 +1361,7 @@ a:focus {
 }
 
 .card .card-header[data-toggle="collapse"].collapsed::after {
-  content: '\f105';
+  content: "\f105";
 }
 .card .card-header {
   background-color: transparent;
@@ -1406,7 +1450,7 @@ a:focus {
 
 .btn-google:not(:disabled):not(.disabled):active,
 .btn-google:not(:disabled):not(.disabled).active,
-.show>.btn-google.dropdown-toggle {
+.show > .btn-google.dropdown-toggle {
   color: #434334;
   background-color: #eeeeee;
   border-color: #434343;
@@ -1414,7 +1458,7 @@ a:focus {
 
 .btn-google:not(:disabled):not(.disabled):active:focus,
 .btn-google:not(:disabled):not(.disabled).active:focus,
-.show>.btn-google.dropdown-toggle:focus {
+.show > .btn-google.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
@@ -1449,7 +1493,7 @@ a:focus {
 
 .btn-facebook:not(:disabled):not(.disabled):active,
 .btn-facebook:not(:disabled):not(.disabled).active,
-.show>.btn-facebook.dropdown-toggle {
+.show > .btn-facebook.dropdown-toggle {
   color: #fff;
   background-color: #2d4373;
   border-color: #dfdfdf;
@@ -1457,7 +1501,7 @@ a:focus {
 
 .btn-facebook:not(:disabled):not(.disabled):active:focus,
 .btn-facebook:not(:disabled):not(.disabled).active:focus,
-.show>.btn-facebook.dropdown-toggle:focus {
+.show > .btn-facebook.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
@@ -1855,7 +1899,6 @@ footer.sticky-footer .copyright {
 
 footer.sticky-footer .copyright a {
   color: #455a64;
-
 }
 
 footer.sticky-footer .copyright a:hover {
@@ -1903,7 +1946,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 .customer-message:hover {
-  background-color: #F8F9FC
+  background-color: #f8f9fc;
 }
 
 .customer-message a .message-title {
@@ -1957,4 +2000,107 @@ body.sidebar-toggled footer.sticky-footer {
   color: #fff;
   background-color: #3f51b5;
   border-color: #3f51b5;
+}
+
+/* Custom Preview Image Upload */
+
+.wrap-custom-file {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  margin: 0 0.5rem 1rem;
+  text-align: center;
+}
+
+.wrap-custom-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.wrap-custom-file label {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 4px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.wrap-custom-file label span {
+  display: block;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #777;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.wrap-custom-file label:hover {
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
+  background: #a0a0a0;
+}
+
+.wrap-custom-file label:hover span {
+  color: #333;
+}
+
+.wrap-custom-file label.file-ok {
+  background-size: cover;
+  background-position: center;
+}
+
+.wrap-custom-file label.file-ok span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+/* Delete Image Icon */
+.img-wraps {
+  position: relative;
+  display: inline-block;
+
+  font-size: 0;
+}
+.img-wraps .closes {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  z-index: 100;
+  background-color: #fff;
+  padding: 4px 3px;
+
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+
+  text-align: center;
+  font-size: 22px;
+  line-height: 10px;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+.img-wraps:hover .closes {
+  opacity: 1;
 }

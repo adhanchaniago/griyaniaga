@@ -1,72 +1,99 @@
 </div>
+<!---Container Fluid-->
+</div>
+<!-- Footer -->
+<footer class="sticky-footer bg-white mt-3">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Application Version 1.0
+            </span>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
 </div>
 </div>
-</div>
-<!--   Core JS Files   -->
-<script src="<?php echo base_url('assets/myaccount/js/core/jquery.3.2.1.min.js');?>"></script>
-<script src="<?php echo base_url('assets/myaccount/js/core/popper.min.js');?>"></script>
-<script src="<?php echo base_url('assets/myaccount/js/core/bootstrap.min.js');?>"></script>
 
-<!-- jQuery UI -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js');?>"></script>
-<script src="<?php echo base_url('assets/myaccount/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js');?>"></script>
+<!-- Scroll to top -->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 
-<!-- jQuery Scrollbar -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js');?>"></script>
-
-<!-- Moment JS -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/moment/moment.min.js');?>"></script>
-
-<!-- Chart JS -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/chart.js/chart.min.js');?>"></script>
-
-<!-- jQuery Sparkline -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/jquery.sparkline/jquery.sparkline.min.js');?>"></script>
-
-<!-- Chart Circle -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/chart-circle/circles.min.js');?>"></script>
-
-<!-- Bootstrap Notify -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/bootstrap-notify/bootstrap-notify.min.js');?>"></script>
-
-<!-- Bootstrap Toggle -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js');?>"></script>
-<!-- Sweet Alert -->
-<script src="<?php echo base_url('assets/myaccount/js/plugin/sweetalert/sweetalert.min.js');?>"></script>
-
-<!-- Azzara JS -->
-<script src="<?php echo base_url('assets/myaccount/js/ready.min.js');?>"></script>
+<script src="<?php echo base_url('assets/admin/vendor/jquery/jquery.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/admin/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/admin/js/myscript.min.js') ?>"></script>
 
 
+<script src="<?php echo base_url('assets/template/js/chosen.jquery.min.js'); ?>"></script>
 
+<!-- AUTOCOMPLETE -->
+<script src="<?php echo base_url('assets/admin/js/autocomplete/jquery-3.3.1.js'); ?>"></script>
+<script src="<?php echo base_url('assets/admin/js/autocomplete/jquery-ui.js'); ?>"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
 
+        $('#donatur_name').autocomplete({
+            source: "<?php echo base_url('admin/home/get_autocomplete'); ?>",
 
+            select: function(event, ui) {
+                $('[name="donatur_name"]').val(ui.item.label);
+                $('[name="donatur_phone"]').val(ui.item.donatur_phone);
+            }
+        });
+
+    });
+</script>
 
 <!-- SUMMERNOTE -->
 <link href="<?php echo base_url('assets/admin/js/summernote/summernote-lite.min.css'); ?>" rel="stylesheet">
 <script src="<?php echo base_url('assets/admin/js/summernote/summernote-lite.min.js'); ?>"></script>
 
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('#summernote').summernote({
+                height: "300px",
+
+            });
+        });
+
+    </script>
+
+<!-- END SUMMERNOTE -->
+
+
+
+<!-- Image Upload preview -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script> -->
 <script>
-    $('#summernote').summernote({
-        placeholder: 'Deskripsi Produk ..',
-        tabsize: 2,
-        height: 130,
-        toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['table', ['table']],
-            ['insert', ['link']],
-            ['view', ['fullscreen', 'codeview', 'help']]
-        ]
-    });
+$('input[type="file"]').each(function(){
+
+	  var $file = $(this),
+	      $label = $file.next('label'),
+	      $labelText = $label.find('span'),
+	      labelDefault = $labelText.text();
+
+	  $file.on('change', function(event){
+	    var fileName = $file.val().split( '\\' ).pop(),
+	        tmppath = URL.createObjectURL(event.target.files[0]);
+	    if( fileName ){
+	      $label
+	        .addClass('file-ok')
+	        .css('background-image', 'url(' + tmppath + ')');
+	      $labelText.text(fileName);
+	    }else{
+	      $label.removeClass('file-ok');
+	      $labelText.text(labelDefault);
+	    }
+	  });
+
+	});
+
 </script>
 
 
 
-
-
+<!-- Format Number -->
 <script>
 var fnf = document.getElementById("formattedNumberField");
 fnf.addEventListener('keyup', function(evt){

@@ -42,6 +42,20 @@ class User_model extends CI_Model
         $query = $this->db->get();
         return $query->row();
     }
+    public function user_detail_property()
+    {
+        $this->db->select('user.*, company.company_name, user_role.role');
+        $this->db->from('user');
+        // Join
+        $this->db->join('company', 'company.id = user.company_id', 'LEFT');
+        $this->db->join('user_role', 'user_role.id = user.role_id', 'LEFT');
+        // End Join
+        $this->db->where(array(
+            'user.email'    => $this->session->userdata('email')
+        ));
+        $query = $this->db->get();
+        return $query->row();
+    }
     public function update($data)
     {
         $this->db->where('id', $data['id']);
@@ -73,14 +87,15 @@ class User_model extends CI_Model
     }
 
     // Update Post Count
-    public function update_post_count($id){
-      $this->db->where('id', $id);
-      $this->db->select('post_count');
-      $count = $this->db->get('user')->row();
-      // then increase by one
-      $this->db->where('id', $id);
-      $this->db->set('post_count', ($count->post_count - 1));
-      $this->db->update('user');
+    public function update_post_count($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->select('post_count');
+        $count = $this->db->get('user')->row();
+        // then increase by one
+        $this->db->where('id', $id);
+        $this->db->set('post_count', ($count->post_count - 1));
+        $this->db->update('user');
     }
     // Total Row pagination
     //Total Berita Main Page

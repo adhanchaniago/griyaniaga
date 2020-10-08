@@ -7,135 +7,57 @@ $meta = $this->meta_model->get_meta();
 
 
 <!-- Sidebar -->
-		<div class="sidebar">
+<ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin/dashboard'); ?>">
 
-			<div class="sidebar-background"></div>
-			<div class="sidebar-wrapper scrollbar-inner">
-				<div class="sidebar-content">
-					<div class="user">
-						<div class="avatar-sm float-left mr-2">
-							<img src="<?php echo base_url('assets/img/avatars/'.$user->user_image);?>" alt="..." class="avatar-img rounded-circle">
-						</div>
-						<div class="info">
-							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-								<span>
-									<?php echo $user->user_name;?>
-									<span class="user-level"><?php echo $user->role;?></span>
-									<span class="caret"></span>
-								</span>
-							</a>
-							<div class="clearfix"></div>
-
-							<div class="collapse in" id="collapseExample">
-								<ul class="nav">
-									<li>
-										<a href="<?php echo base_url('myaccount/profile');?>">
-											<span class="link-collapse">My Profile</span>
-										</a>
-									</li>
-									<li>
-										<a href="<?php echo base_url('myaccount/profile/update');?>">
-											<span class="link-collapse">Edit Profile</span>
-										</a>
-									</li>
-									<li>
-										
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<ul class="nav">
-						<li class="nav-item active">
-							<a href="<?php echo base_url('myaccount');?>">
-								<i class="ri-home-5-line"></i>
-								<p>Home</p>
-								<span class="badge badge-count">5</span>
-							</a>
-						</li>
-						<li class="nav-section">
-							<span class="sidebar-mini-icon">
-								<i class="fa fa-ellipsis-h"></i>
-							</span>
-							<h4 class="text-section">Listing</h4>
-						</li>
+        <div class="sidebar-brand-icon">
+            <i class="ti-lock"></i> </div>
+        <div class="sidebar-brand-text mx-3">Admin</div>
+    </a>
+    <hr class="sidebar-divider my-0">
 
 
-            <li class="nav-item">
-							<a href="<?php echo base_url('myaccount/property');?>">
-								<i class="ri-building-2-line"></i>
-								<p>Iklan Saya</p>
-
-							</a>
-						</li>
-
-            <li class="nav-item">
-							<a href="<?php echo base_url('myaccount/package');?>">
-								<i class="ri-shopping-bag-3-line"></i>
-								<p>Paket</p>
-
-							</a>
-						</li>
+    <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('myaccount/home'); ?>">
+            <i class="ri-home-5-line"></i>
+            <span>Dashboard</span></a>
+    </li>
 
 
-						<li class="nav-item">
-							<a href="<?php echo base_url('myaccount/profile');?>">
-								<i class="ri-user-line"></i>
-								<p>Akun saya</p>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('myaccount/property'); ?>">
+            <i class="ri-building-2-line fa-fw"></i>
+            <span>Property</span>
+        </a>
+    </li>
 
-							</a>
-						</li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('myaccount/package'); ?>">
+            <i class="ri-inbox-unarchive-line"></i>
+            <span>Paket</span>
+        </a>
+    </li>
 
-						<li class="nav-item">
-							<a href="<?php echo base_url('auth/logout');?>">
-								<i class="ri-shut-down-line"></i>
-								<p>Logout</p>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('myaccount/profile'); ?>">
+            <i class="ri-user-6-line"></i>
+            <span>My Account</span>
+        </a>
+    </li>
 
-							</a>
-						</li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">
+            <i class="ri-logout-box-r-line"></i>
+            <span> Logout</span>
+        </a>
+    </li>
 
 
 
 
 
+</ul>
+<!-- Sidebar -->
 
-
-
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- End Sidebar -->
-
-    <div class="main-panel">
-    			<div class="content">
-    				<div class="page-inner">
-    					<div class="page-header">
-
-
-
-                <h4 class="page-title"><?php echo $title;?></h4>
-						<ul class="breadcrumbs">
-							<li class="nav-home">
-								<a href="<?php echo base_url('myaccount');?>">
-									<i class="flaticon-home"></i>
-								</a>
-							</li>
-							<li class="separator">
-								<i class="flaticon-right-arrow"></i>
-							</li>
-							<li class="nav-item">
-								<a href="<?php echo base_url('admin/' . $this->uri->segment(1)) ?>"><?php echo ucfirst(str_replace('_', ' ', $this->uri->segment(1))) ?></a>
-							</li>
-							<li class="separator">
-								<i class="flaticon-right-arrow"></i>
-							</li>
-							<li class="nav-item">
-								<?php echo $title ?>
-							</li>
-						</ul>
-
-
-
-
-    					</div>
+<div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">

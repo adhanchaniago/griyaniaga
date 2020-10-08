@@ -18,7 +18,16 @@ class Images_model extends CI_Model
         return $query->result();
     }
 
-    public function gambar_iklan($id)
+    public function image_detail($id)
+    {
+        $this->db->select('*');
+        $this->db->from('images');
+        $this->db->where('images.id', $id);
+        $query = $this->db->get();
+        return $query->row();
+    }
+
+    public function image_detail_property($id)
     {
         $this->db->select('*');
         $this->db->from('images');
@@ -27,12 +36,13 @@ class Images_model extends CI_Model
         return $query->result();
     }
 
+
     //Kirim Data Berita ke database
     public function create($data)
     {
-          $this->db->insert('images', $data);
-          $insert_id = $this->db->insert_id();
-          return $insert_id;
+        $this->db->insert('images', $data);
+        $insert_id = $this->db->insert_id();
+        return $insert_id;
     }
     //Update Data
     public function update($data)
@@ -44,15 +54,16 @@ class Images_model extends CI_Model
     public function delete($data)
     {
         $this->db->where('id', $data['id']);
+        $this->db->where('user_id', $data['user_id']);
         $this->db->delete('images', $data);
     }
 
-    public function images_property($property_id){
-      $this->db->select('*');
-      $this->db->from('images');
-      $this->db->where('property_id', $property_id);
-      $query = $this->db->get();
-      return $query->result();
+    public function images_property($property_id)
+    {
+        $this->db->select('*');
+        $this->db->from('images');
+        $this->db->where('property_id', $property_id);
+        $query = $this->db->get();
+        return $query->result();
     }
-
 }

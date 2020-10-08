@@ -98,9 +98,9 @@ class Berita extends CI_Controller
 
             $config['upload_path']          = './assets/img/artikel/';
             $config['allowed_types']        = 'gif|jpg|png|jpeg';
-            $config['max_size']             = 5000; //Dalam Kilobyte
-            $config['max_width']            = 5000; //Lebar (pixel)
-            $config['max_height']           = 5000; //tinggi (pixel)
+            $config['max_size']             = 500000; //Dalam Kilobyte
+            $config['max_width']            = 500000; //Lebar (pixel)
+            $config['max_height']           = 500000; //tinggi (pixel)
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('berita_gambar')) {
 
@@ -139,7 +139,7 @@ class Berita extends CI_Controller
                 $data  = [
                     'user_id'           => $this->session->userdata('id'),
                     'category_id'       => $this->input->post('category_id'),
-                    'berita_slug'       => $slugcode . '-' . $berita_slug,
+                    'berita_slug'       => $berita_slug . '-' .$slugcode,
                     'berita_title'      => $this->input->post('berita_title'),
                     'berita_desc'       => $this->input->post('berita_desc'),
                     'berita_gambar'     => $upload_data['uploads']['file_name'],

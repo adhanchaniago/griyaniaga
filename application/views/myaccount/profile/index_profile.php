@@ -1,114 +1,79 @@
+<?php
+//Notifikasi
+if ($this->session->flashdata('message')) {
+    echo '<div class="alert alert-success alert-dismissable fade show">';
+    echo '<button class="close" data-dismiss="alert" aria-label="Close">×</button>';
+    echo $this->session->flashdata('message');
+    echo '</div>';
+}
+
+
+?>
 <div class="row">
+    <!-- Basic Button -->
+    <div class="col-lg-9">
+        <div class="card mb-4">
+            <div class="card-body">
 
-	<div class="col-md-4">
-		<div class="card card-profile card-secondary">
-			<div class="card-header" style="background-image: url('assets/img/blogpost.jpg')">
-				<div class="profile-picture">
-					<div class="avatar avatar-xl">
-						<img src="<?php echo base_url('assets/img/avatars/'.$user->user_image);?>" alt="..." class="avatar-img rounded-circle">
-					</div>
-				</div>
-			</div>
-			<div class="card-body">
-				<div class="user-profile text-center">
-					<div class="name"><?php echo $user->user_name;?></div>
-					<div class="job"><?php echo $user->user_phone;?></div>
-					<div class="desc"><?php echo $user->user_bio;?></div>
-					<div class="social-media">
-						<a class="btn btn-info btn-twitter btn-sm btn-link" href="#">
-							<span class="btn-label just-icon"><i class="flaticon-twitter"></i> </span>
-						</a>
-						<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#">
-							<span class="btn-label just-icon"><i class="flaticon-google-plus"></i> </span>
-						</a>
-						<a class="btn btn-primary btn-sm btn-link" rel="publisher" href="#">
-							<span class="btn-label just-icon"><i class="flaticon-facebook"></i> </span>
-						</a>
-						<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#">
-							<span class="btn-label just-icon"><i class="flaticon-dribbble"></i> </span>
-						</a>
-					</div>
-					<div class="view-profile">
-						<a href="<?php echo base_url('myaccount/profile/update');?>" class="btn btn-secondary btn-block">Ubah Profile</a>
-					</div>
-				</div>
-			</div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="img-fluid" src="<?php echo base_url('assets/img/avatars/' . $user->user_image); ?>">
+                            </div>
+                            <div class="col-md-9">
 
-		</div>
-	</div>
+                                <h2><i class="fas fa-store"></i> <?php echo $user->user_name; ?></h2>
+                                <i class="fab fa-whatsapp"></i> <?php echo $user->user_phone; ?><br>
+                                <i class="far fa-map"></i> <?php echo $user->user_address; ?><br>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+                        <a href="<?php echo base_url('myaccount/profile/update'); ?>" class="btn btn-success bg-gradient-success btn-block"> <i class="ti-user"></i> Ubah Profile</a>
+                        <a href="<?php echo base_url('myaccount/ubah_password'); ?>" class="btn btn-primary bg-gradient-primary btn-block"> <i class="ti-lock"></i> Ubah Password</a>
+                        <!-- <a href="" class="btn btn-danger bg-gradient-danger btn-block"> Pengeluaran</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
 
 
-						<div class="col-md-8">
-							<div class="card card-with-nav">
+    <div class="col-lg-9">
+        <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                  <label class="col-lg-3 col-form-label">Nama
+                  </label>
+                  <div class="col-lg-9">
+                      : <?php echo $user->user_name;?>
+                  </div>
 
-								<?php
-								//Notifikasi
-								if ($this->session->flashdata('message')) {
-									echo $this->session->flashdata('message');}
-								?>
-								<div class="card-header">
-									<div class="row row-nav-line">
-										<ul class="nav nav-tabs nav-line nav-color-secondary" role="tablist">
-											<li class="nav-item"> <a class="nav-link active show" data-toggle="tab" href="#home" role="tab" aria-selected="true">Informasi</a> </li>
-										</ul>
-									</div>
-								</div>
-								<div class="card-body">
-									<div class="row mt-3">
-										<div class="col-md-6">
-											<div class="form-group form-group-default">
-												<label>Nama Lengkap</label>
-												<?php echo $user->user_name;?>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group form-group-default">
-												<label>Email</label>
-												<?php echo $user->email;?>
-											</div>
-										</div>
-									</div>
-									<div class="row mt-3">
-										<div class="col-md-4">
-											<div class="form-group form-group-default">
-												<label>Agent Property</label>
-												<?php echo $user->company_name;?>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group form-group-default">
-												<label>Nomor HP</label>
-												<?php echo $user->user_phone;?>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group form-group-default">
-												<label>Whatsapp</label>
-												<?php echo $user->user_whatsapp;?>
-											</div>
-										</div>
-									</div>
-									<div class="row mt-3">
-										<div class="col-md-12">
-											<div class="form-group form-group-default">
-												<label>Alamat</label>
-												<?php echo $user->user_address;?>
-											</div>
-										</div>
-									</div>
-									<div class="row mt-3 mb-1">
-										<div class="col-md-12">
-											<div class="form-group form-group-default">
-												<label>Biografi</label>
-												<?php echo $user->user_bio;?>
-											</div>
-										</div>
-									</div>
-									<div class="text-right mt-3 mb-3">
+                  <label class="col-lg-3 col-form-label">Email
+                  </label>
+                  <div class="col-lg-9">
+                      : <?php echo $user->email;?>
+                  </div>
 
-									</div>
-								</div>
-							</div>
-						</div>
+                  <label class="col-lg-3 col-form-label">Biografi
+                  </label>
+                  <div class="col-lg-9">
+                      : <?php echo $user->user_bio;?>
+                  </div>
 
-					</div>
+
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
