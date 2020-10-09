@@ -394,7 +394,7 @@
 
             <div class="float-right share">
 
-
+              <div class="sharethis-inline-share-buttons"></div>
 
             </div>
 

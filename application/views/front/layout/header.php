@@ -11,7 +11,7 @@ $meta = $this->meta_model->get_meta();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?php echo $meta->tagline ?> | <?php echo $meta->title ?></title>
-  <link rel="shortcut icon" href="<?php echo base_url('assets/img/logo/' .$meta->favicon);?>">
+  <link rel="shortcut icon" href="<?php echo base_url('assets/img/logo/' . $meta->favicon); ?>">
   <meta name="description" content="<?php echo $deskripsi ?>">
   <meta name="keywords" content="<?php echo $meta->title . ',' . $keywords ?>">
   <meta name="author" content="<?php echo $meta->title ?>">
@@ -24,7 +24,7 @@ $meta = $this->meta_model->get_meta();
   <meta property="og:title" content="<?php echo $meta->title . ',' . $keywords ?>" />
   <meta property="og:description" content="<?php echo $deskripsi ?>" />
   <meta property="og:url" content="<?php echo base_url(); ?>" />
-  <meta property="og:image" content="<?php echo base_url('assets/img/logo/' .$meta->logo);?>" />
+  <meta property="og:image" content="<?php echo base_url('assets/img/logo/' . $meta->logo); ?>" />
   <meta property="og:site_name" content="<?php echo $meta->title ?>" />
   <meta name="twitter:description" content="<?php echo $deskripsi ?>" />
   <meta name="twitter:title" content="<?php echo $meta->title ?>" />
@@ -44,8 +44,8 @@ $meta = $this->meta_model->get_meta();
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/template/fonts/open-sans/styles.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/template/fonts/raleway/styles.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/template/fonts/niramit/styles.css">
-
-
+  <!-- Share this -->
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f7fd80b9798460012e64c1d&product=inline-share-buttons' async='async'></script>
 </head>
 
 <body>
