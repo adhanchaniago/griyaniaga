@@ -21,13 +21,13 @@ $meta = $this->meta_model->get_meta();
   <link rel="canonical" href="<?php echo base_url(); ?>" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="<?php echo $meta->title . ',' . $keywords ?>" />
+  <meta property="og:title" content="<?php echo $title ?>" />
   <meta property="og:description" content="<?php echo $deskripsi ?>" />
   <meta property="og:url" content="<?php echo base_url(); ?>" />
   <meta property="og:image" content="<?php echo base_url('assets/img/logo/' . $meta->logo); ?>" />
   <meta property="og:site_name" content="<?php echo $meta->title ?>" />
   <meta name="twitter:description" content="<?php echo $deskripsi ?>" />
-  <meta name="twitter:title" content="<?php echo $meta->title ?>" />
+  <meta name="twitter:title" content="<?php echo $title ?>" />
 
 
   <!-- Vendor CSS Files -->
