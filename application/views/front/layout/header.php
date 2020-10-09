@@ -13,7 +13,7 @@ $meta = $this->meta_model->get_meta();
   <title><?php echo $meta->tagline ?> | <?php echo $meta->title ?></title>
   <link rel="shortcut icon" href="<?php echo base_url('assets/img/logo/' . $meta->favicon); ?>">
   <meta name="description" content="<?php echo $deskripsi ?>">
-  <meta name="keywords" content="<?php echo $meta->title . ',' . $keywords ?>">
+  <meta name="keywords" content="<?php echo $meta->title . ',' . $title . ',' . $keywords ?>">
   <meta name="author" content="<?php echo $meta->title ?>">
   <meta name="google-site-verification" content="<?php echo $meta->google_meta ?>" />
   <meta name="msvalidate.01" content="<?php echo $meta->bing_meta ?>" />
