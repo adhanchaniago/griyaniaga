@@ -13,18 +13,18 @@ class Home extends CI_Controller
     $this->load->model('property_model');
 
 
-    // function detect_mobile()
-    // {
-    //   if (preg_match('/(alcatel|amoi|android|avantgo|blackberry|benq|cell|cricket|docomo|elaine|htc|iemobile|iphone|ipad|ipaq|ipod|j2me|java|midp|mini|mmp|mobi|motorola|nec-|nokia|palm|panasonic|philips|phone|playbook|sagem|sharp|sie-|silk|smartphone|sony|symbian|t-mobile|telus|up.browser|up.link|vodafone|wap|webos|wireless|xda|xoom|zte)/i', $_SERVER['HTTP_USER_AGENT']))
-    //     return true;
-    //   else
-    //     return false;
-    // }
+    function detect_mobile()
+    {
+      if (preg_match('/(alcatel|amoi|android|avantgo|blackberry|benq|cell|cricket|docomo|elaine|htc|iemobile|iphone|ipad|ipaq|ipod|j2me|java|midp|mini|mmp|mobi|motorola|nec-|nokia|palm|panasonic|philips|phone|playbook|sagem|sharp|sie-|silk|smartphone|sony|symbian|t-mobile|telus|up.browser|up.link|vodafone|wap|webos|wireless|xda|xoom|zte)/i', $_SERVER['HTTP_USER_AGENT']))
+        return true;
+      else
+        return false;
+    }
   }
   public function index()
   {
 
-    // $mobile = detect_mobile();
+    $mobile = detect_mobile();
 
     $id = $this->session->userdata('id');
     $user = $this->user_model->user_detail($id);
@@ -32,7 +32,7 @@ class Home extends CI_Controller
     $popular_property = $this->property_model->get_property_popular();
 
 
-    // Tampilan Mobile Version
+    // End Listing Berita dengan paginasi
     $data = array(
       'title'       => 'Property',
       'deskripsi'   => 'Berita - ' . $meta->description,
@@ -41,8 +41,8 @@ class Home extends CI_Controller
       'meta'        => $meta,
       'popular_property'    => $popular_property,
       'pagination'    => $this->pagination->create_links(),
-      'content'       => 'mobile/home/index_home'
+      'content'       => 'front/home/index_home'
     );
-    $this->load->view('mobile/layout/wrapp', $data, FALSE);
+    $this->load->view('front/layout/wrapp', $data, FALSE);
   }
 }
